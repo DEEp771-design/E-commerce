@@ -2,6 +2,19 @@
 
 A professional, full-stack e-commerce admin dashboard built with **React + Vite** and **FastAPI**.
 
+## 🌐 Live Deployment
+
+| Component | Link | Status |
+|-----------|------|--------|
+| **Frontend** | https://e-commerce-cyan-nu.vercel.app | ✅ Live |
+| **Backend API** | https://web-production-a216.up.railway.app | ✅ Live |
+| **API Docs** | https://web-production-a216.up.railway.app/docs | ✅ Live |
+| **GitHub Repo** | https://github.com/DEEp771-design/E-commerce | ✅ Source Code |
+
+### 🧪 Test Login
+- **Username:** `test`
+- **Password:** `test`
+
 ## ✨ Features
 
 - 🛍️ **Product Management** - Browse, search, and filter 300+ products
