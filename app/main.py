@@ -265,7 +265,7 @@ def create_order(o: schemas.OrderCreate, db: Session = Depends(get_db), user=Dep
 
 @app.get("/orders", tags=["Orders"])
 def list_orders(db: Session = Depends(get_db), user=Depends(get_user)):
-    return db.query(models.Order).all()
+    return db.query(models.Order).filter_by(user=user).all()
 
 # ======================
 # STOCK
