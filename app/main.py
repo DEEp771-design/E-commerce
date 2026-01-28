@@ -298,11 +298,12 @@ def stock_logs(db: Session = Depends(get_db), user=Depends(get_user)):
 
 @app.get("/dashboard/summary", tags=["Dashboard"])
 def summary(db: Session = Depends(get_db), user=Depends(get_user)):
+    user_orders = db.query(models.Order).filter_by(user=user).all()
     return {
         "total_products": db.query(models.Product).count(),
         "active_products": db.query(models.Product).filter(models.Product.status=="active").count(),
-        "total_orders": db.query(models.Order).count(),
-        "total_sales": sum([o.total for o in db.query(models.Order).all()])
+        "total_orders": len(user_orders),
+        "total_sales": sum([o.total for o in user_orders])
     }
 
 
